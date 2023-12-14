@@ -44,6 +44,7 @@ function solutionExercice2(L) {
   }
   return smallestPositive;
 }
+
 function solutionExercice3(L) {
   var res = 'EXERCICE 3';
   //TAPE LE CODE DE L'EXERCICE 3 ICI!
@@ -52,12 +53,8 @@ function solutionExercice3(L) {
   // Parcours de la liste pour compter les occurrences de chaque élément
   for (var i = 0; i < L.length; i++) {
     var currentElement = L[i];
-    // Si l'élément existe déjà dans la hashmap, on incrémente son compteur
-    // Sinon, on l'ajoute à la hashmap avec un compteur initialisé à 1
     occurrences[currentElement] = (occurrences[currentElement] || 0) + 1;
   }
-
-  // Parcours de la hashmap pour trouver l'élément unique
   for (var key in occurrences) {
     if (occurrences[key] === 1) {
       res = key;
